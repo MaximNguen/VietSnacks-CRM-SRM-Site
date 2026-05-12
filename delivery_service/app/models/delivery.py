@@ -16,6 +16,7 @@ class DeliveryStatus(enum.Enum):
     CANCELLED = "cancelled"
 
 class Delivery(Base):
+    """Класс модели доставки, представляющий таблицу 'deliveries' в базе данных."""
     __tablename__ = "deliveries"
 
     delivery_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

@@ -8,6 +8,8 @@ from app.services.users import UserService
 
 logger = logging.getLogger(__name__)
 
+"""Вспомогательные методы для сервиса пользователей, обеспечивающие внедрение зависимостей."""
+
 async def get_async_db():
     async with AsyncSessionLocal() as db:
         logger.info("Получение асинхронной сессии базы данных...")

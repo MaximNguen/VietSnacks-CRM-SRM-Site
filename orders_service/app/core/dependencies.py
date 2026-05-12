@@ -8,7 +8,9 @@ from app.repositories.orders import OrderRepository
 from app.services.orders import OrderService
 
 logger = logging.getLogger(__name__)
-    
+
+"""Вспомогательные методы для сервиса заказов, обеспечивающие внедрение зависимостей."""
+
 async def get_async_db():
     async with AsyncSessionLocal() as db:
         logger.info("Получение асинхронной сессии базы данных...")

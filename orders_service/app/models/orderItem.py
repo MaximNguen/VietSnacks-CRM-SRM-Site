@@ -6,6 +6,7 @@ import uuid
 from app.core.database import Base
 
 class OrderItem(Base):
+    """Класс модели элемента заказа, представляющий таблицу 'order_items' в базе данных."""
     __tablename__ = "order_items"
     
     order_item_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

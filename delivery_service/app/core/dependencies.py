@@ -8,6 +8,8 @@ from app.services.delivery import DeliveryService
 
 logger = logging.getLogger(__name__)
 
+"""Вспомогательные методы для сервиса доставки, обеспечивающие внедрение зависимостей."""
+
 async def get_async_db():
     async with AsyncSessionLocal() as db:
         logger.info("Получение асинхронной сессии базы данных...")

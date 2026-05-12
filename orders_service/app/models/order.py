@@ -18,6 +18,7 @@ class OrderStatus(enum.Enum):
     CANCELLED = "cancelled"
     
 class Order(Base):
+    """Класс модели заказа, представляющий таблицу 'orders' в базе данных."""
     __tablename__ = "orders"
     
     order_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
